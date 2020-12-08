@@ -11,6 +11,6 @@ import com.libro.entity.Libro;
 
 public interface LibroRepository extends JpaRepository<Libro, Integer>{
 
-	@Query("select x from Libro x where x.tipoLibro = :var_filtro")
+	@Query("select x from Libro x where x.idTipoLibro = :var_filtro")
 	public List<Libro> listaPorNombre(@Param("var_filtro") int filtro);
 }
